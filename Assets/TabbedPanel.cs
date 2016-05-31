@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization.Formatters;
+using Debug = UnityEngine.Debug;
 
 /*
     Tabbed panel UI controller
@@ -16,6 +18,7 @@ using System.Runtime.Serialization.Formatters;
 
 
  */
+
 public class TabbedPanel : MonoBehaviour
 {
     //[SerializeField]
@@ -50,8 +53,6 @@ public List<Tab> _tabsList = new List<Tab>();
     private TabbedSheet _currentSelected;
     private RectTransform _tabsParent;
     private RectTransform _sheetsParent;
-
-    
 
     void Awake()
     {
